@@ -10,6 +10,8 @@ import java.time.LocalDate;
 public class Main {
     public static void main(String[] args) {
 
+        findByPrice(18000, getLaptops(), getPhones(), getHomes(), getAirplanes(), getCars(),getHelicopter());
+
     }
 
 
@@ -60,16 +62,37 @@ public class Main {
                                    Laptop[] laptops, Phone[] phones,
                                    Home[] homes, Airplane[] airplanes,
                                    Car[] cars, Helicopter[] helicopters){
-        double getPrice = 0;
 
         for (Laptop laptop : laptops) {
-            if (price == laptop.getPrice()){
-                getPrice = laptop.getPrice();
+            if (laptop.getPrice() == price){
+                System.out.println(laptop);
             }
         }
 
+        for (Phone phone : phones) {
+            boolean trueOrFalse = phone.getPrice() == price;
+            if (trueOrFalse){
+                System.out.println(phone);
+            }
+        }
 
+        for (Home home : homes) {
+            if (home.getPrice() == price){
+                System.out.println(home);
+            }
+        }
 
+        for (Airplane airplane : airplanes) {
+            if (airplane.getPrice() == price){
+                System.out.println(airplane);
+            }
+        }
+
+        for (Car car : cars) {
+            if (car.getPrice() == price){
+                System.out.println(car);
+            }
+        }
     }
 
 }
